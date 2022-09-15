@@ -1,5 +1,5 @@
-import { Box, Center, Heading, Spacer, Text } from "@chakra-ui/react";
-
+import { Box, Center, Heading, Icon, Link, Text } from "@chakra-ui/react";
+import { AiFillCaretUp } from "react-icons/ai";
 function Home() {
   return (
     <>
@@ -18,6 +18,20 @@ function Home() {
             FullStack Web Developer | Industrial Engineer
           </Text>
         </Box>
+        <Link href="#home">
+          <Icon
+            as={AiFillCaretUp}
+            position="fixed"
+            bottom="0"
+            right="0"
+            m="2rem"
+            h={10}
+            w={10}
+            color="white"
+            border="1px solid black"
+            bgColor="black"
+          />
+        </Link>
       </Center>
     </>
   );

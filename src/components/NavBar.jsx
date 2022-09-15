@@ -1,4 +1,4 @@
-import { Box, Button, ButtonGroup } from "@chakra-ui/react";
+import { Box, Button, ButtonGroup, Link } from "@chakra-ui/react";
 
 function NavBar() {
   return (
@@ -15,10 +15,18 @@ function NavBar() {
         border={"1px solid red"}
       >
         <ButtonGroup border={"1px solid red"} mr="1rem">
-          <Button variant="ghost">HOME</Button>
-          <Button variant="ghost">ABOUT</Button>
-          <Button variant="ghost">PROJECTS</Button>
-          <Button variant="ghost">CONTACT</Button>
+          <Link href="#home">
+            <Button variant="ghost">HOME</Button>
+          </Link>
+          <Link href="#about">
+            <Button variant="ghost">ABOUT</Button>
+          </Link>
+          <Link href="#projects">
+            <Button variant="ghost">PROJECTS</Button>
+          </Link>
+          <Link href="#contact">
+            <Button variant="ghost">CONTACT</Button>
+          </Link>
         </ButtonGroup>
       </Box>
     </>

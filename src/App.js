@@ -9,10 +9,21 @@ function App() {
   return (
     <>
       <NavBar />
-      <Home />
-      <About />
-      <Projects />
-      <Contact />
+
+      <scroll-container>
+        <scroll-page id="home">
+          <Home />
+        </scroll-page>
+        <scroll-page id="about">
+          <About />
+        </scroll-page>
+        <scroll-page id="projects">
+          <Projects />
+        </scroll-page>
+        <scroll-page id="contact">
+          <Contact />
+        </scroll-page>
+      </scroll-container>
     </>
   );
 }
