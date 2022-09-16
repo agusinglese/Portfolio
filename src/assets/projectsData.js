@@ -12,6 +12,7 @@ export const projects = [
     id: 2,
     name: "Countries App",
     primaryTec: ["React.js", "Node.js"],
+    img: [],
     gitHub: "https://github.com/agusinglese/PI-countries-main",
     deploy: "https://pi-countries-main-iota.vercel.app/",
     description:

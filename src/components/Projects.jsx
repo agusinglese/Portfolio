@@ -2,7 +2,6 @@ import {
   Box,
   Button,
   Center,
-  Container,
   Heading,
   Icon,
   Text,
@@ -17,11 +16,13 @@ import {
   ModalCloseButton,
   useDisclosure,
   Link,
+  Divider,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { AiFillGithub } from "react-icons/ai";
 import { BiLinkExternal } from "react-icons/bi";
 import { projects } from "../assets/projectsData";
+import Carrousel from "./Carrousel";
 
 function Projects() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -89,16 +90,24 @@ function Projects() {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
+          <ModalBody p="0">
+            <Carrousel />
+          </ModalBody>
+          <ModalHeader>
+            {currentProject.name}
+            <Divider />
+          </ModalHeader>
           <ModalCloseButton />
-          <ModalBody>{currentProject.name}</ModalBody>
+          <Box m="0 2rem" textAlign={"justify"}>
+            <Text fontSize={"0.9rem"}>{currentProject.description}</Text>
+          </Box>
 
-          <ModalFooter>
+          <ModalFooter p="0">
             <Link href={currentProject.gitHub} isExternal>
-              <Icon as={AiFillGithub} h={4} m={4} />
+              <Icon as={AiFillGithub} h={5} w={5} m={3} />
             </Link>
             <Link href={currentProject.deploy} isExternal>
-              <Icon as={BiLinkExternal} h={4} m={4} />
+              <Icon as={BiLinkExternal} h={5} w={5} m={3} />
             </Link>
           </ModalFooter>
         </ModalContent>
