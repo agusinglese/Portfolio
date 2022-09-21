@@ -47,7 +47,7 @@ function Projects() {
     <>
       <Center h="100vh" flexDirection={"column"}>
         <Heading as="h3">PROJECTS</Heading>
-        <Wrap>
+        <Wrap justifyContent={"center"} alignItems="center">
           {projects.map((e) => (
             <WrapItem>
               <Box>

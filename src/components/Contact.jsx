@@ -5,32 +5,113 @@ import {
   FormControl,
   Heading,
   Input,
+  Text,
   Textarea,
 } from "@chakra-ui/react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 function Contact() {
+  const form = useRef();
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setSending(true);
+
+    emailjs
+      .sendForm(
+        "service_tgh7sxu",
+        "template_z8tq6lv",
+        form.current,
+        "-n_rrn-bKOvRUdQOn"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setSending(false);
+          setSent(true);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
+
   return (
     <>
       <Center h="100vh" bg="whitesmoke" flexDirection={"column"}>
         <Box>
-          <Heading as="h3">CONTACT</Heading>
+          <Heading as="h3" mt="-5rem" mb="5rem">
+            CONTACT
+          </Heading>
         </Box>
         <Box>
-          <form
-            action="mailto:ingleseagustina@gmail.com"
-            method="post"
-            name="formContact"
-          >
-            <FormControl>
-              <Input name="name" type="text" placeholder="Your name" />
+          <form ref={form} onSubmit={sendEmail} name="form">
+            <FormControl isRequired>
+              <Input
+                name="name"
+                type="text"
+                placeholder="Your name"
+                m={2}
+                w={{
+                  base: "80vw",
+                  sm: "80vw",
+                  md: "50vw",
+                  lg: "30vh",
+                  xl: "30vw",
+                }}
+              />
             </FormControl>
-            <FormControl>
-              <Input name="email" type="text" placeholder="Enter name" />
+            <FormControl isRequired>
+              <Input
+                w={{
+                  base: "80vw",
+                  sm: "80vw",
+                  md: "50vw",
+                  lg: "30vh",
+                  xl: "30vw",
+                }}
+                m={2}
+                name="email"
+                type="email"
+                placeholder="Enter email"
+              />
             </FormControl>
-            <FormControl>
-              <Textarea name="message" type="text" placeholder="Your message" />
+            <FormControl isRequired>
+              <Textarea
+                w={{
+                  base: "80vw",
+                  sm: "80vw",
+                  md: "50vw",
+                  lg: "30vh",
+                  xl: "30vw",
+                }}
+                m={2}
+                name="message"
+                type="text"
+                placeholder="Your message"
+              />
             </FormControl>
-            <Input value="Send" type="submit" />
+            <Box display={"flex"} flexDirection="column" alignItems={"center"}>
+              <Button
+                w="8rem"
+                m={2}
+                isLoading={sending}
+                loadingText="Loading"
+                colorScheme="teal"
+                variant="outline"
+                spinnerPlacement="start"
+                value="Send"
+                type="submit"
+              >
+                Send
+              </Button>
+              {sent && <Text color="green.400">Message sent!</Text>}
+            </Box>
           </form>
         </Box>
       </Center>
