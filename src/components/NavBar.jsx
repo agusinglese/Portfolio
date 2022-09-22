@@ -15,17 +15,29 @@ function NavBar() {
         border={"1px solid red"}
       >
         <ButtonGroup border={"1px solid red"} mr="1rem">
-          <Link href="#home">
-            <Button variant="ghost">HOME</Button>
+          <Link href="#home" textDecoration={"none"}>
+            <Button colorScheme={"pink"} variant="ghost">
+              HOME
+            </Button>
           </Link>
-          <Link href="#about">
-            <Button variant="ghost">ABOUT</Button>
+          <Link href="#about" textDecoration={"none"}>
+            <Button
+              textDecorationLine={"none"}
+              colorScheme={"pink"}
+              variant="ghost"
+            >
+              ABOUT
+            </Button>
           </Link>
-          <Link href="#projects">
-            <Button variant="ghost">PROJECTS</Button>
+          <Link href="#projects" textDecoration={"none"}>
+            <Button colorScheme={"pink"} variant="ghost">
+              PROJECTS
+            </Button>
           </Link>
-          <Link href="#contact">
-            <Button variant="ghost">CONTACT</Button>
+          <Link href="#contact" textDecoration={"none"}>
+            <Button colorScheme={"pink"} variant="ghost">
+              CONTACT
+            </Button>
           </Link>
         </ButtonGroup>
       </Box>

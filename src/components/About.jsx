@@ -51,44 +51,58 @@ function About() {
               <Text>Escribir descripcion</Text>
             </Container>
           </Box>
-          <Box border="1px solid red">
+          <Box border="1px solid red" colorScheme="pink">
             <Text>Technologies and tools</Text>
-            <Wrap w={{ lg: "40vw", xl: "40vw" }} spacing={6}>
+            <Wrap
+              border="1px solid yellow"
+              w={{ lg: "40vw", xl: "40vw" }}
+              align={"center"}
+              justify="center"
+              spacing={6}
+            >
               <WrapItem border="1px solid gray" p={1} m={"1rem"}>
-                <Icon as={SiJavascript} h={4} w={4} m={1} /> JavaScript
-              </WrapItem>
-              <WrapItem border="1px solid gray" p={1} m={"1rem"}>
-                <Icon as={SiHtml5} h={4} w={4} m={1} /> HTML
-              </WrapItem>
-              <WrapItem border="1px solid gray" p={1} m={"1rem"}>
-                <Icon as={SiCss3} h={4} w={4} m={1} /> CSS
-              </WrapItem>
-              <WrapItem border="1px solid gray" p={1} m={"1rem"}>
-                <Icon as={FaReact} h={4} w={4} m={1} /> React
+                <Icon as={SiJavascript} h={4} w={4} m={2} />{" "}
+                <Text m={1}>JavaScript</Text>
               </WrapItem>
               <WrapItem border="1px solid gray" p={1} m={"1rem"}>
-                <Icon as={SiRedux} h={4} w={4} m={1} /> Redux
+                <Icon as={SiHtml5} h={4} w={4} m={2} /> <Text m={1}>HTML</Text>
               </WrapItem>
               <WrapItem border="1px solid gray" p={1} m={"1rem"}>
-                <Icon as={FaNodeJs} h={4} w={4} m={1} /> Node.js
+                <Icon as={SiCss3} h={4} w={4} m={2} /> <Text m={1}>CSS</Text>
+              </WrapItem>
+              <WrapItem border="1px solid gray" p={1} m={"1rem"}>
+                <Icon as={FaReact} h={4} w={4} m={2} /> <Text m={1}>React</Text>
+              </WrapItem>
+              <WrapItem border="1px solid gray" p={1} m={"1rem"}>
+                <Icon as={SiRedux} h={4} w={4} m={2} />{" "}
+                <Text m={1}>Redux/Redux Toolkit</Text>
+              </WrapItem>
+              <WrapItem border="1px solid gray" p={1} m={"1rem"}>
+                <Icon as={FaNodeJs} h={4} w={4} m={2} />{" "}
+                <Text m={1}>Node.js</Text>
               </WrapItem>
               <WrapItem border="1px solid gray" p={1} m="1rem">
-                <Icon as={SiExpress} h={4} w={4} m={1} /> Express
+                <Icon as={SiExpress} h={4} w={4} m={2} />{" "}
+                <Text m={1}>Express</Text>
               </WrapItem>
               <WrapItem border="1px solid gray" p={1} m="1rem">
-                <Icon as={FaGitAlt} h={4} w={4} m={1} /> Git
+                <Icon as={FaGitAlt} h={4} w={4} m={2} /> <Text m={1}>Git</Text>
               </WrapItem>
               <WrapItem border="1px solid gray" p={1} m="1rem">
-                <Icon as={SiPostgresql} h={4} w={4} m={1} /> PostgresSQL
+                <Icon as={SiPostgresql} h={4} w={4} m={2} />{" "}
+                <Text m={1}>PostgresSQL</Text>
               </WrapItem>
               <WrapItem border="1px solid gray" p={1} m="1rem">
-                <Icon as={SiVisualstudiocode} h={4} w={4} m={1} /> VS Code
+                <Icon as={SiVisualstudiocode} h={4} w={4} m={2} />{" "}
+                <Text m={1}>VS Code</Text>
               </WrapItem>
               <WrapItem border="1px solid gray" p={1} m="1rem">
-                <Icon as={SiHeroku} h={4} w={4} m={1} /> Heroku
+                <Icon as={SiHeroku} h={4} w={4} m={2} />{" "}
+                <Text m={1}>Heroku</Text>
               </WrapItem>
               <WrapItem border="1px solid gray" p={1} m="1rem">
-                <Icon as={SiVercel} h={4} w={4} m={1} /> Vercel
+                <Icon as={SiVercel} h={4} w={4} m={2} />{" "}
+                <Text m={1}>Vercel</Text>
               </WrapItem>
             </Wrap>
           </Box>

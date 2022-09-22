@@ -53,6 +53,7 @@ function Contact() {
           <form ref={form} onSubmit={sendEmail} name="form">
             <FormControl isRequired>
               <Input
+                colorScheme={"pink"}
                 name="name"
                 type="text"
                 placeholder="Your name"
@@ -102,8 +103,7 @@ function Contact() {
                 m={2}
                 isLoading={sending}
                 loadingText="Loading"
-                colorScheme="teal"
-                variant="outline"
+                colorScheme="pink"
                 spinnerPlacement="start"
                 value="Send"
                 type="submit"

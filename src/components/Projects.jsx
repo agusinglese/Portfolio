@@ -70,18 +70,24 @@ function Projects() {
 
                     sx={innerBoxStyles}
                   >
-                    <Heading as="h6">{e.name}</Heading>
-                    <Text>{e.primaryTec.join(" / ")}</Text>
+                    <Heading colorScheme="pink" as="h6" fontSize="4xl">
+                      {e.name.toUpperCase()}
+                    </Heading>
+                    <Text colorScheme="pink" mb="4rem" fontWeight={"thin"}>
+                      {e.primaryTec.join(" / ")}
+                    </Text>
                     <Button
-                      bgColor={"black"}
                       onClick={() => searchProject(e.id)}
-                      color="white"
+                      colorScheme="pink"
+                      variant="outline"
+                      letterSpacing={"wider"}
+                      borderRadius="0"
+                      fontWeight={"thin"}
                     >
                       Read More
                     </Button>
                   </Box>
                 </Box>
-                <Text>{e.name}</Text>
               </Box>
             </WrapItem>
           ))}

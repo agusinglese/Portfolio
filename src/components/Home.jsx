@@ -14,7 +14,12 @@ function Home() {
             Hi! I'm Agustina Inglese
           </Heading>
 
-          <Text textAlign={"center"} m="1rem">
+          <Text
+            textAlign={"center"}
+            m="1rem"
+            fontWeight={"thin"}
+            letterSpacing="wider"
+          >
             FullStack Web Developer | Industrial Engineer
           </Text>
         </Box>
