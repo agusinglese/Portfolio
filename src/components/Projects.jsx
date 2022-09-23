@@ -33,7 +33,7 @@ function Projects() {
     alignItems: "center",
     justifyContent: "center",
     textAlign: "center",
-    color: "black",
+
     fontWeight: "bold",
     fontSize: "20px",
   };
@@ -56,11 +56,12 @@ function Projects() {
                   w="400px"
                   border="1px solid black"
                   backgroundPosition="center"
+                  bgSize={"cover"}
                   backgroundRepeat="no-repeat"
-                  backgroundImage="url(https://avalos.sv/wp-content/uploads/default-featured-image.png)"
+                  backgroundImage={`url(${e.bgImg})`}
                 >
                   <Box
-                    bgColor={"#FFFFFF90"}
+                    bgColor={"#ffffffc8"}
                     opacity="0"
                     _hover={{ opacity: "1" }}
                     h="300px"
@@ -93,11 +94,11 @@ function Projects() {
           ))}
         </Wrap>
       </Center>
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal isOpen={isOpen} onClose={onClose} size="xl">
         <ModalOverlay />
         <ModalContent>
           <ModalBody p="0">
-            <Carrousel />
+            <Carrousel img={currentProject.img} />
           </ModalBody>
           <ModalHeader>
             {currentProject.name}
