@@ -45,7 +45,7 @@ function Projects() {
 
   return (
     <>
-      <Center minH="100vh" flexDirection={"column"} bg="whitesmoke">
+      <Center minH="90vh" flexDirection={"column"} bg="whitesmoke">
         <Heading as="h3" mb="5rem">
           PROJECTS
         </Heading>

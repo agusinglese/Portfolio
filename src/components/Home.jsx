@@ -32,7 +32,6 @@ function Home() {
 
             borderRadius: ["4rem", "4rem"],
           }}
-          // @ts-ignore no problem in operation, although type error appears.
           transition={{
             duration: 3,
             ease: "easeInOut",

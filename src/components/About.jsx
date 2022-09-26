@@ -2,6 +2,7 @@ import {
   Box,
   Center,
   Container,
+  Divider,
   Heading,
   Icon,
   Image,
@@ -9,6 +10,7 @@ import {
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";
+import profileImg from "../assets/profile.jpeg";
 import {
   SiJavascript,
   SiRedux,
@@ -19,6 +21,7 @@ import {
   SiHtml5,
   SiCss3,
   SiVercel,
+  SiMongodb,
 } from "react-icons/si";
 import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
 
@@ -26,9 +29,10 @@ function About() {
   return (
     <>
       <Center minH="100vh" display="flex" flexDirection={"column"}>
-        <Heading as="h3" mb="3rem">
+        <Heading as="h3" mb="2rem">
           ABOUT
         </Heading>
+
         <Box
           display="flex"
           flexDirection={{
@@ -39,19 +43,32 @@ function About() {
           }}
           w="100%"
           justifyContent={"space-around"}
-          border="1px solid red"
         >
-          <Box border="1px solid red">
-            <Image
-              src="https://i.pinimg.com/474x/db/f2/98/dbf29846182809672f7829ee975e7e79.jpg"
-              w="10rem"
-              h="10rem"
-            />
-            <Container>
-              <Text>Escribir descripcion</Text>
+          <Box
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            bgColor="yellow.100"
+            p="1rem"
+          >
+            <Image src={profileImg} h="15rem" />
+            <Container w="70%" m="1rem">
+              <Text textAlign={"center"}>
+                I am an{" "}
+                <Text as="b" color="blue.400" display={"inline"}>
+                  Industrial Engineer
+                </Text>{" "}
+                and{" "}
+                <Text as="b" color="blue.400" display={"inline"}>
+                  Full Stack Developer
+                </Text>{" "}
+                in Spain. It's my passion to complement my studies to solve the
+                problems that arise in companies daily. I focus on details and
+                creating intuitive and dynamic user experiences.
+              </Text>
             </Container>
           </Box>
-          <Box border="3px solid red" colorScheme="pink">
+          <Box colorScheme="pink">
             <Text
               p="1rem"
               textAlign={"center"}
@@ -62,14 +79,13 @@ function About() {
             </Text>
             <Wrap
               p="3rem"
-              border="1px solid yellow"
               w={{ lg: "40vw", xl: "40vw" }}
               align={"center"}
               justify="center"
               spacing={6}
             >
-              <WrapItem border="1px solid gray" p={1} m={"1rem"}>
-                <Icon as={SiJavascript} h={4} w={4} m={2} />{" "}
+              <WrapItem p={1} m={"1rem"}>
+                <Icon as={SiJavascript} h={4} w={4} m={2} color="blue.500" />{" "}
                 <Text m={1}>JavaScript</Text>
               </WrapItem>
               <WrapItem border="1px solid gray" p={1} m={"1rem"}>
@@ -99,6 +115,10 @@ function About() {
               <WrapItem border="1px solid gray" p={1} m="1rem">
                 <Icon as={SiPostgresql} h={4} w={4} m={2} />{" "}
                 <Text m={1}>PostgresSQL</Text>
+              </WrapItem>
+              <WrapItem border="1px solid gray" p={1} m="1rem">
+                <Icon as={SiMongodb} h={4} w={4} m={2} />{" "}
+                <Text m={1}>MongoDb</Text>
               </WrapItem>
               <WrapItem border="1px solid gray" p={1} m="1rem">
                 <Icon as={SiVisualstudiocode} h={4} w={4} m={2} />{" "}

@@ -11,6 +11,7 @@ import {
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
+import Footer from "./Footer";
 
 function Contact() {
   const form = useRef();
@@ -43,9 +44,9 @@ function Contact() {
 
   return (
     <>
-      <Center h="100vh" flexDirection={"column"}>
+      <Center h="70vh" flexDirection={"column"}>
         <Box>
-          <Heading as="h3" mb="5rem">
+          <Heading as="h3" mb="4rem">
             CONTACT
           </Heading>
         </Box>
