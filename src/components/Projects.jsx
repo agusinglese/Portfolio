@@ -45,8 +45,10 @@ function Projects() {
 
   return (
     <>
-      <Center h="100vh" flexDirection={"column"}>
-        <Heading as="h3">PROJECTS</Heading>
+      <Center minH="100vh" flexDirection={"column"} bg="whitesmoke">
+        <Heading as="h3" mb="5rem">
+          PROJECTS
+        </Heading>
         <Wrap justifyContent={"center"} alignItems="center">
           {projects.map((e) => (
             <WrapItem>
@@ -54,14 +56,14 @@ function Projects() {
                 <Box
                   h="300px"
                   w="400px"
-                  border="1px solid black"
+                  m={0}
                   backgroundPosition="center"
                   bgSize={"cover"}
                   backgroundRepeat="no-repeat"
                   backgroundImage={`url(${e.bgImg})`}
                 >
                   <Box
-                    bgColor={"#ffffffc8"}
+                    bgColor={"#ffffff"}
                     opacity="0"
                     _hover={{ opacity: "1" }}
                     h="300px"
@@ -71,10 +73,20 @@ function Projects() {
 
                     sx={innerBoxStyles}
                   >
-                    <Heading colorScheme="pink" as="h6" fontSize="4xl">
+                    <Heading
+                      colorScheme="pink"
+                      as="h6"
+                      fontSize="4xl"
+                      fontWeight={"hairline"}
+                    >
                       {e.name.toUpperCase()}
                     </Heading>
-                    <Text colorScheme="pink" mb="4rem" fontWeight={"thin"}>
+                    <Text
+                      colorScheme="pink"
+                      mb="4rem"
+                      color="pink.600"
+                      fontWeight={"thin"}
+                    >
                       {e.primaryTec.join(" / ")}
                     </Text>
                     <Button
@@ -83,7 +95,8 @@ function Projects() {
                       variant="outline"
                       letterSpacing={"wider"}
                       borderRadius="0"
-                      fontWeight={"thin"}
+                      fontSize={"xl"}
+                      fontWeight={"light"}
                     >
                       Read More
                     </Button>

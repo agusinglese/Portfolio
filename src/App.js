@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import "./App.css";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -9,21 +10,18 @@ function App() {
   return (
     <>
       <NavBar />
-
-      <scroll-container>
-        <scroll-page id="home">
-          <Home />
-        </scroll-page>
-        <scroll-page id="about">
-          <About />
-        </scroll-page>
-        <scroll-page id="projects">
-          <Projects />
-        </scroll-page>
-        <scroll-page id="contact">
-          <Contact />
-        </scroll-page>
-      </scroll-container>
+      <Box id="home">
+        <Home />
+      </Box>
+      <Box id="about">
+        <About />
+      </Box>
+      <Box id="projects">
+        <Projects />
+      </Box>
+      <Box id="contact">
+        <Contact />
+      </Box>
     </>
   );
 }

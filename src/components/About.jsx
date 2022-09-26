@@ -25,8 +25,8 @@ import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
 function About() {
   return (
     <>
-      <Center h="100vh" bg="whitesmoke" display="flex" flexDirection={"column"}>
-        <Heading as="h3" m="2rem">
+      <Center minH="100vh" display="flex" flexDirection={"column"}>
+        <Heading as="h3" mb="3rem">
           ABOUT
         </Heading>
         <Box
@@ -51,9 +51,17 @@ function About() {
               <Text>Escribir descripcion</Text>
             </Container>
           </Box>
-          <Box border="1px solid red" colorScheme="pink">
-            <Text>Technologies and tools</Text>
+          <Box border="3px solid red" colorScheme="pink">
+            <Text
+              p="1rem"
+              textAlign={"center"}
+              fontSize="2xl"
+              fontWeight={"hairline"}
+            >
+              Technologies and tools
+            </Text>
             <Wrap
+              p="3rem"
               border="1px solid yellow"
               w={{ lg: "40vw", xl: "40vw" }}
               align={"center"}

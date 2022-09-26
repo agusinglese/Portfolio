@@ -43,9 +43,9 @@ function Contact() {
 
   return (
     <>
-      <Center h="100vh" bg="whitesmoke" flexDirection={"column"}>
+      <Center h="100vh" flexDirection={"column"}>
         <Box>
-          <Heading as="h3" mt="-5rem" mb="5rem">
+          <Heading as="h3" mb="5rem">
             CONTACT
           </Heading>
         </Box>
@@ -53,7 +53,7 @@ function Contact() {
           <form ref={form} onSubmit={sendEmail} name="form">
             <FormControl isRequired>
               <Input
-                colorScheme={"pink"}
+                bgColor="white"
                 name="name"
                 type="text"
                 placeholder="Your name"
@@ -69,6 +69,7 @@ function Contact() {
             </FormControl>
             <FormControl isRequired>
               <Input
+                bgColor="white"
                 w={{
                   base: "80vw",
                   sm: "80vw",
@@ -84,6 +85,7 @@ function Contact() {
             </FormControl>
             <FormControl isRequired>
               <Textarea
+                bgColor="white"
                 w={{
                   base: "80vw",
                   sm: "80vw",

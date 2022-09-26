@@ -7,8 +7,9 @@ import {
   chakra,
   shouldForwardProp,
   Text,
+  Spacer,
 } from "@chakra-ui/react";
-import { AiFillCaretUp } from "react-icons/ai";
+
 import { motion, isValidMotionProp } from "framer-motion";
 
 const ChakraBox = chakra(motion.div, {
@@ -22,11 +23,12 @@ const ChakraBox = chakra(motion.div, {
 function Home() {
   return (
     <>
-      <Center h="100vh" bgImage="linear-gradient(blue,pink)">
+      <Center h="100vh" bgImage="linear-gradient(#2C5282,#3182CE,#2C5282)">
         <ChakraBox
           animate={{
             scale: [0, 1],
             rotate: [-45, -45],
+            translate: [("-10px", "-10px"), ("10px", "10px")],
 
             borderRadius: ["4rem", "4rem"],
           }}
@@ -41,25 +43,24 @@ function Home() {
           position={"absolute"}
           left={0}
         ></ChakraBox>
-        <Box
-          h="5rem"
-          w="15rem"
-          borderRadius="4rem"
-          bgColor="red"
-          position={"absolute"}
-          left={0}
-          top={0}
-        ></Box>
-        <Box
-          h="5rem"
-          w="15rem"
-          borderRadius="4rem"
-          bgColor="red"
-          position={"absolute"}
-        ></Box>
-        <Box display="flex" flexDirection={"column"} bgColor="#ffffff80">
-          <Heading as="h1" m="1rem">
-            Hi! I'm Agustina Inglese
+
+        <ChakraBox
+          animate={{
+            scale: [0, 1],
+          }}
+          transition={{
+            duration: 2,
+            ease: "easeInOut",
+          }}
+          display="flex"
+          flexDirection={"column"}
+          bgColor="#ffffff80"
+          p={"3rem"}
+        >
+          <Heading as="h1" m="1rem" fontSize="6xl">
+            Hi! I'm
+            <Spacer />
+            Agustina Inglese
           </Heading>
 
           <Text
@@ -67,24 +68,11 @@ function Home() {
             m="1rem"
             fontWeight={"thin"}
             letterSpacing="wider"
+            fontSize={"3xl"}
           >
             FullStack Web Developer | Industrial Engineer
           </Text>
-        </Box>
-        <Link href="#home">
-          <Icon
-            as={AiFillCaretUp}
-            position="fixed"
-            bottom="0"
-            right="0"
-            m="2rem"
-            h={10}
-            w={10}
-            color="white"
-            border="1px solid black"
-            bgColor="black"
-          />
-        </Link>
+        </ChakraBox>
       </Center>
     </>
   );
