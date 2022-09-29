@@ -29,7 +29,7 @@ function About() {
   return (
     <>
       <Center minH="100vh" display="flex" flexDirection={"column"}>
-        <Heading as="h3" mb="2rem">
+        <Heading as="h3" mb="1rem">
           ABOUT
         </Heading>
 
@@ -48,10 +48,19 @@ function About() {
             display="flex"
             flexDirection="column"
             alignItems="center"
-            bgColor="yellow.100"
             p="1rem"
           >
-            <Image src={profileImg} h="15rem" />
+            <Box
+              position={"absolute"}
+              h="30rem"
+              w="35rem"
+              bgColor="yellow.100"
+              p="1rem"
+              transform={"skew(10deg)"}
+              zIndex="-1"
+              borderRadius={"5rem"}
+            ></Box>
+            <Image src={profileImg} h="15rem" mt="3rem" />
             <Container w="70%" m="1rem">
               <Text textAlign={"center"}>
                 I am an{" "}

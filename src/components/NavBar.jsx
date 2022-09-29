@@ -34,16 +34,7 @@ function NavBar() {
       >
         <ButtonGroup mr="1rem">
           <Link href="#home" _hover={{ textDecoration: "none" }}>
-            <Button
-              _hover={{
-                bgColor: "tranparent",
-
-                transform: "scale(1.5)",
-              }}
-              colorScheme={"pink"}
-              variant="ghost"
-              color="pink.200"
-            >
+            <Button colorScheme={"pink"} variant="ghost" color="pink.200">
               HOME
             </Button>
           </Link>
@@ -62,7 +53,7 @@ function NavBar() {
               PROJECTS
             </Button>
           </Link>
-          <Link href="#contact" textDecoration={"none"}>
+          <Link href="#contact" _hover={{ textDecoration: "none" }}>
             <Button colorScheme={"pink"} color="pink.200" variant="ghost">
               CONTACT
             </Button>
@@ -87,6 +78,7 @@ function NavBar() {
             bgColor="black"
             borderRadius={"3rem"}
             p={2}
+            _hover={{ transform: "scale(1.3)" }}
           />
         </Link>
       )}

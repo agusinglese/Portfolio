@@ -124,10 +124,22 @@ function Projects() {
 
           <ModalFooter p="0">
             <Link href={currentProject.gitHub} isExternal>
-              <Icon as={AiFillGithub} h={5} w={5} m={3} />
+              <Icon
+                as={AiFillGithub}
+                h={5}
+                w={5}
+                m={3}
+                _hover={{ transform: "scale(1.3)" }}
+              />
             </Link>
             <Link href={currentProject.deploy} isExternal>
-              <Icon as={BiLinkExternal} h={5} w={5} m={3} />
+              <Icon
+                as={BiLinkExternal}
+                h={5}
+                w={5}
+                m={3}
+                _hover={{ transform: "scale(1.3)" }}
+              />
             </Link>
           </ModalFooter>
         </ModalContent>

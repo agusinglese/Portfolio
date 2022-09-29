@@ -23,7 +23,7 @@ function Carrousel({ img }) {
             position="absolute"
             left="0"
             bottom="45%"
-            bgColor="transparent"
+            bgColor="#ffffff50"
             color="black"
             fontSize={"xl"}
           >
@@ -38,8 +38,7 @@ function Carrousel({ img }) {
             bottom="45%"
             color="black"
             fontSize={"xl"}
-            bgColor="transparent"
-            _hover={{ bgColor: "#ffffff30" }}
+            bgColor="#ffffff50"
           >
             <Icon as={BsChevronRight} />
           </Button>
