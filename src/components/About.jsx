@@ -1,11 +1,15 @@
 import {
   Box,
   Center,
+  Code,
   Container,
   Divider,
   Heading,
   Icon,
   Image,
+  Spacer,
+  Tag,
+  TagLabel,
   Text,
   Wrap,
   WrapItem,
@@ -16,20 +20,30 @@ import {
   SiRedux,
   SiExpress,
   SiPostgresql,
+  SiChakraui,
   SiVisualstudiocode,
   SiHeroku,
   SiHtml5,
   SiCss3,
   SiVercel,
   SiMongodb,
+  SiMaterialui,
+  SiBootstrap,
+  SiSequelize,
+  SiTypescript,
 } from "react-icons/si";
-import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaGitAlt, FaGithub } from "react-icons/fa";
 
 function About() {
   return (
     <>
-      <Center minH="100vh" display="flex" flexDirection={"column"}>
-        <Heading as="h3" mb="1rem">
+      <Center
+        minH="110vh"
+        display="flex"
+        flexDirection={"column"}
+        bgColor="whitesmoke"
+      >
+        <Heading as="h3" mb="2rem">
           ABOUT
         </Heading>
 
@@ -42,33 +56,26 @@ function About() {
             lg: "row",
           }}
           w="100%"
-          justifyContent={"space-around"}
+          justifyContent={"center"}
         >
-          <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            p="1rem"
-          >
-            <Box
+          <Box display="flex" flexDirection="column" alignItems="center">
+            {/*<Box
               position={"absolute"}
               h="30rem"
-              w="35rem"
-              bgColor="yellow.100"
+              w="30rem"
+              bgColor="blue.300"
               p="1rem"
-              transform={"skew(10deg)"}
               zIndex="-1"
-              borderRadius={"5rem"}
-            ></Box>
+            ></Box>*/}
             <Image src={profileImg} h="15rem" mt="3rem" />
             <Container w="70%" m="1rem">
               <Text textAlign={"center"}>
                 I am an{" "}
-                <Text as="b" color="blue.400" display={"inline"}>
+                <Text as="b" color="blue.900" display={"inline"}>
                   Industrial Engineer
                 </Text>{" "}
                 and{" "}
-                <Text as="b" color="blue.400" display={"inline"}>
+                <Text as="b" color="blue.900" display={"inline"}>
                   Full Stack Developer
                 </Text>{" "}
                 in Spain. It's my passion to complement my studies to solve the
@@ -77,71 +84,162 @@ function About() {
               </Text>
             </Container>
           </Box>
-          <Box colorScheme="pink">
-            <Text
-              p="1rem"
-              textAlign={"center"}
-              fontSize="2xl"
-              fontWeight={"hairline"}
-            >
-              Technologies and tools
-            </Text>
-            <Wrap
-              p="3rem"
-              w={{ lg: "40vw", xl: "40vw" }}
-              align={"center"}
-              justify="center"
-              spacing={6}
-            >
-              <WrapItem p={1} m={"1rem"}>
-                <Icon as={SiJavascript} h={4} w={4} m={2} color="blue.500" />{" "}
-                <Text m={1}>JavaScript</Text>
-              </WrapItem>
-              <WrapItem border="1px solid gray" p={1} m={"1rem"}>
-                <Icon as={SiHtml5} h={4} w={4} m={2} /> <Text m={1}>HTML</Text>
-              </WrapItem>
-              <WrapItem border="1px solid gray" p={1} m={"1rem"}>
-                <Icon as={SiCss3} h={4} w={4} m={2} /> <Text m={1}>CSS</Text>
-              </WrapItem>
-              <WrapItem border="1px solid gray" p={1} m={"1rem"}>
-                <Icon as={FaReact} h={4} w={4} m={2} /> <Text m={1}>React</Text>
-              </WrapItem>
-              <WrapItem border="1px solid gray" p={1} m={"1rem"}>
-                <Icon as={SiRedux} h={4} w={4} m={2} />{" "}
-                <Text m={1}>Redux/Redux Toolkit</Text>
-              </WrapItem>
-              <WrapItem border="1px solid gray" p={1} m={"1rem"}>
-                <Icon as={FaNodeJs} h={4} w={4} m={2} />{" "}
-                <Text m={1}>Node.js</Text>
-              </WrapItem>
-              <WrapItem border="1px solid gray" p={1} m="1rem">
-                <Icon as={SiExpress} h={4} w={4} m={2} />{" "}
-                <Text m={1}>Express</Text>
-              </WrapItem>
-              <WrapItem border="1px solid gray" p={1} m="1rem">
-                <Icon as={FaGitAlt} h={4} w={4} m={2} /> <Text m={1}>Git</Text>
-              </WrapItem>
-              <WrapItem border="1px solid gray" p={1} m="1rem">
-                <Icon as={SiPostgresql} h={4} w={4} m={2} />{" "}
-                <Text m={1}>PostgresSQL</Text>
-              </WrapItem>
-              <WrapItem border="1px solid gray" p={1} m="1rem">
-                <Icon as={SiMongodb} h={4} w={4} m={2} />{" "}
-                <Text m={1}>MongoDb</Text>
-              </WrapItem>
-              <WrapItem border="1px solid gray" p={1} m="1rem">
-                <Icon as={SiVisualstudiocode} h={4} w={4} m={2} />{" "}
-                <Text m={1}>VS Code</Text>
-              </WrapItem>
-              <WrapItem border="1px solid gray" p={1} m="1rem">
-                <Icon as={SiHeroku} h={4} w={4} m={2} />{" "}
-                <Text m={1}>Heroku</Text>
-              </WrapItem>
-              <WrapItem border="1px solid gray" p={1} m="1rem">
-                <Icon as={SiVercel} h={4} w={4} m={2} />{" "}
-                <Text m={1}>Vercel</Text>
-              </WrapItem>
-            </Wrap>
+          <Box
+            display={"flex"}
+            flexDirection="column"
+            justifyContent={"start"}
+            alignItems={"start"}
+            pt={"3rem"}
+          >
+            <Center w="100%" m="1rem">
+              <Text textAlign={"center"} color="blue.900" fontSize={"xl"}>
+                Technologies and tools with which I have worked:
+              </Text>
+            </Center>
+            <Box w="50vw" m="0.5rem" display={"flex"} flexDirection="row">
+              <Center w="30%" bgColor="pink.300">
+                <Text textAlign={"center"} fontWeight={"semibold"}>
+                  CODE
+                </Text>
+              </Center>
+              <Box
+                display="flex"
+                flexDirection="row"
+                w="100%"
+                bgColor="pink.100"
+                justifyContent={"space-around"}
+                fontWeight={"light"}
+              >
+                <Box display="flex" flexDirection="row">
+                  <Icon as={SiJavascript} h={5} w={5} m={2} color="blue.300" />{" "}
+                  <Text m={1}>JavaScript</Text>
+                </Box>
+                <Box display="flex" flexDirection="row">
+                  <Icon as={SiHtml5} h={5} w={5} m={2} color="blue.300" />{" "}
+                  <Text m={1}>HTML</Text>
+                </Box>
+                <Box display="flex" flexDirection="row">
+                  <Icon as={SiCss3} h={5} w={5} m={2} color="blue.300" />{" "}
+                  <Text m={1}>CSS</Text>
+                </Box>
+              </Box>
+            </Box>
+            <Box w="50vw" m="0.5rem" display={"flex"} flexDirection="row">
+              <Center w="30%" bgColor="pink.300">
+                <Text fontWeight={"semibold"}>FRONT END</Text>
+              </Center>
+              <Box
+                bgColor="pink.100"
+                display="flex"
+                flexDirection="row"
+                w="100%"
+                justifyContent={"space-around"}
+              >
+                <Box display="flex" flexDirection="row">
+                  <Icon as={FaReact} h={5} w={5} m={2} color="blue.300" />
+                  <Text m={1}>React</Text>
+                </Box>
+                <Box display="flex" flexDirection="row">
+                  <Icon as={SiRedux} h={5} w={5} m={2} color="blue.400" />
+                  <Text m={1}>Redux/Redux Toolkit</Text>
+                </Box>
+                <Box display="flex" flexDirection="row">
+                  <Icon as={SiChakraui} h={5} w={5} m={2} color="blue.400" />
+                  <Text m={1}>Chakra UI</Text>
+                </Box>
+                <Box display="flex" flexDirection="row">
+                  <Icon as={SiMaterialui} h={5} w={5} m={2} color="blue.400" />
+                  <Text m={1}>Material UI</Text>
+                </Box>
+              </Box>
+            </Box>
+            <Box w="50vw" m="0.5rem" display={"flex"} flexDirection="row">
+              <Center w="30%" bgColor="pink.300">
+                <Text textAlign={"center"} fontWeight={"semibold"}>
+                  BACK END
+                </Text>
+              </Center>
+              <Box
+                bgColor="pink.100"
+                display="flex"
+                flexDirection="row"
+                w="100%"
+                justifyContent={"space-around"}
+              >
+                <Box display="flex" flexDirection="row">
+                  <Icon as={FaNodeJs} h={5} w={5} m={2} color="blue.400" />{" "}
+                  <Text m={1}>Node.js</Text>
+                </Box>
+                <Box display="flex" flexDirection="row">
+                  <Icon as={SiExpress} h={5} w={5} m={2} color="blue.400" />{" "}
+                  <Text m={1}>Express</Text>
+                </Box>
+                <Box display="flex" flexDirection="row">
+                  <Icon as={SiSequelize} h={5} w={5} m={2} color="blue.400" />{" "}
+                  <Text m={1}>Sequelize</Text>
+                </Box>
+              </Box>
+            </Box>
+            <Box w="50vw" m="0.5rem" display={"flex"} flexDirection="row">
+              <Center w="30%" bgColor="pink.300">
+                <Text textAlign={"center"} fontWeight={"semibold"}>
+                  DATA BASES
+                </Text>
+              </Center>
+              <Box
+                bgColor="pink.100"
+                display="flex"
+                flexDirection="row"
+                w="100%"
+                justifyContent={"space-around"}
+              >
+                <Box display="flex" flexDirection="row">
+                  <Icon as={SiPostgresql} h={5} w={5} m={2} color="blue.400" />{" "}
+                  <Text m={1}>PostgresSQL</Text>
+                </Box>
+                <Box display="flex" flexDirection="row">
+                  <Icon as={SiMongodb} h={5} w={5} m={2} color="blue.400" />{" "}
+                  <Text m={1}>MongoDb</Text>
+                </Box>
+              </Box>
+            </Box>
+            <Box w="50vw" m="0.5rem" display={"flex"} flexDirection="row">
+              <Center w="30%" bgColor="pink.300">
+                <Text
+                  textAlign={"center"}
+                  bgColor="pink.300"
+                  fontWeight={"semibold"}
+                >
+                  TOOLS
+                </Text>
+              </Center>
+              <Box
+                bgColor="pink.100"
+                display="flex"
+                flexDirection="row"
+                w="100%"
+                justifyContent={"space-around"}
+              >
+                <Box display="flex" flexDirection="row">
+                  <Icon as={FaGitAlt} h={5} w={5} m={2} color="blue.400" />{" "}
+                  <Text m={1}>Git</Text>
+                </Box>
+                <Box display="flex" flexDirection="row">
+                  <Icon as={FaGithub} h={5} w={5} m={2} color="blue.400" />{" "}
+                  <Text m={1}>GitHub</Text>
+                </Box>
+                <Box display="flex" flexDirection="row">
+                  <Icon
+                    as={SiVisualstudiocode}
+                    h={4}
+                    w={4}
+                    m={2}
+                    color="blue.400"
+                  />{" "}
+                  <Text m={1}>VS Code</Text>
+                </Box>
+              </Box>
+            </Box>
           </Box>
         </Box>
       </Center>
