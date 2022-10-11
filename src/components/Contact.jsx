@@ -11,7 +11,6 @@ import {
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
-import Footer from "./Footer";
 
 function Contact() {
   const form = useRef();
@@ -44,12 +43,31 @@ function Contact() {
 
   return (
     <>
-      <Center h="70vh" flexDirection={"column"}>
-        <Box>
-          <Heading as="h3" mb="4rem">
-            CONTACT
-          </Heading>
+      <Center h="70vh" flexDirection={"column"} bgColor="whitesmoke">
+        <Box w="30%" display="flex" justifyContent={"start"} mb="0.5rem">
+          <Box w="60%" bgColor="black" h="0.2rem" borderRadius={"30%"}></Box>
         </Box>
+        <Heading
+          as="h3"
+          size="2xl"
+          fontWeight={"medium"}
+          mb="0.5rem"
+          w="100%"
+          textAlign={"center"}
+          letterSpacing="0.5rem"
+        >
+          CONTACT
+        </Heading>
+        <Box
+          w="30%"
+          display="flex"
+          justifyContent={"end"}
+          mt="0.5rem"
+          mb="2rem"
+        >
+          <Box w="60%" bgColor="black" h="0.2rem" borderRadius={"30%"}></Box>
+        </Box>
+
         <Box>
           <form ref={form} onSubmit={sendEmail} name="form">
             <FormControl isRequired>

@@ -49,7 +49,7 @@ export const projects = [
     bgImg:
       "https://user-images.githubusercontent.com/101023416/192393597-affb8d32-023f-4e84-98b4-d6080adba505.jpg",
     gitHub: "https://github.com/agusinglese/Weather-App",
-    deploy: "",
+
     img: [weather1, weather2, weather3, weather4, weather5],
     description:
       "By means of geolocation, the user can visualize the weather of the city where it is located by just entering the site and, in addition, has the possibility to search for the city that wants. Built with React.js, Context API",

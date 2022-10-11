@@ -30,7 +30,7 @@ function NavBar() {
         flexDirection={"column"}
         justifyContent="center"
         alignItems="end"
-        bgColor={"#2C5282"}
+        bgColor="#00739e"
       >
         <ButtonGroup mr="1rem">
           <Link href="#home" _hover={{ textDecoration: "none" }}>

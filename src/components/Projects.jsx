@@ -45,10 +45,30 @@ function Projects() {
 
   return (
     <>
-      <Center minH="90vh" flexDirection={"column"} bg="whitesmoke">
-        <Heading as="h3" mb="5rem">
+      <Center minH="100vh" flexDirection={"column"} bg="#00739e">
+        <Box w="30%" display="flex" justifyContent={"start"} mb="0.5rem">
+          <Box w="60%" bgColor="black" h="0.2rem" borderRadius={"30%"}></Box>
+        </Box>
+        <Heading
+          as="h3"
+          size="2xl"
+          fontWeight={"medium"}
+          mb="0.5rem"
+          w="100%"
+          textAlign={"center"}
+          letterSpacing="0.5rem"
+        >
           PROJECTS
         </Heading>
+        <Box
+          w="30%"
+          display="flex"
+          justifyContent={"end"}
+          mt="0.5rem"
+          mb="2rem"
+        >
+          <Box w="60%" bgColor="black" h="0.2rem" borderRadius={"30%"}></Box>
+        </Box>
         <Wrap justifyContent={"center"} alignItems="center">
           {projects.map((e) => (
             <WrapItem>
@@ -132,15 +152,17 @@ function Projects() {
                 _hover={{ transform: "scale(1.3)" }}
               />
             </Link>
-            <Link href={currentProject.deploy} isExternal>
-              <Icon
-                as={BiLinkExternal}
-                h={5}
-                w={5}
-                m={3}
-                _hover={{ transform: "scale(1.3)" }}
-              />
-            </Link>
+            {currentProject.deploy && (
+              <Link href={currentProject.deploy} isExternal>
+                <Icon
+                  as={BiLinkExternal}
+                  h={5}
+                  w={5}
+                  m={3}
+                  _hover={{ transform: "scale(1.3)" }}
+                />
+              </Link>
+            )}
           </ModalFooter>
         </ModalContent>
       </Modal>

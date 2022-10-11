@@ -5,7 +5,7 @@ import { SiGmail } from "react-icons/si";
 function Footer() {
   return (
     <>
-      <Box bgColor="#2C5282" h="20vh" w="100%">
+      <Box bgColor="#00739e" h="20vh" w="100%">
         <ButtonGroup
           h="100%"
           justifyContent={"center"}
@@ -16,43 +16,48 @@ function Footer() {
             <Button
               colorScheme={"pink"}
               borderRadius="0"
-              h="2rem"
-              w="2rem"
+              h="3rem"
+              w="3rem"
               _hover={{
                 transform: "scale(1.5)",
               }}
+              bgColor="whitesmoke"
             >
-              <Icon as={FaLinkedinIn} h={4} w={4} />
+              <Icon as={FaLinkedinIn} h={6} w={6} color="#00739e" />
             </Button>
           </Link>
           <Link href="https://github.com/agusinglese" isExternal>
             <Button
               colorScheme={"pink"}
               borderRadius="0"
-              h="2rem"
-              w="2rem"
+              h="3rem"
+              w="3rem"
               ml="2rem"
               mr="2rem"
+              bgColor="whitesmoke"
               _hover={{
                 transform: "scale(1.5)",
               }}
             >
-              <Icon as={AiFillGithub} h={4} w={4} />
+              <Icon as={AiFillGithub} h={6} w={6} color="#00739e" />
             </Button>
           </Link>
 
-          <Button
-            colorScheme={"pink"}
-            borderRadius="0"
-            h="2rem"
-            w="2rem"
-            m="2rem"
-            _hover={{
-              transform: "scale(1.5)",
-            }}
-          >
-            <Icon as={SiGmail} h={4} w={4} />
-          </Button>
+          <Link href="mailto: ingleseagustina@gmail.com" isExternal>
+            <Button
+              colorScheme={"pink"}
+              borderRadius="0"
+              h="3rem"
+              w="3rem"
+              mr="2rem"
+              bgColor="whitesmoke"
+              _hover={{
+                transform: "scale(1.5)",
+              }}
+            >
+              <Icon as={SiGmail} h={6} w={6} color="#00739e" />
+            </Button>
+          </Link>
         </ButtonGroup>
       </Box>
     </>
