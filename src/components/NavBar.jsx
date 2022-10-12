@@ -32,7 +32,7 @@ function NavBar() {
         alignItems="end"
         bgColor="#00739e"
       >
-        <ButtonGroup mr="1rem">
+        <ButtonGroup mr={{ base: "0", sm: "0", lg: "1rem", xl: "1rem" }}>
           <Link href="#home" _hover={{ textDecoration: "none" }}>
             <Button colorScheme={"pink"} variant="ghost" color="pink.200">
               HOME

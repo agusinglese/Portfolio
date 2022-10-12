@@ -46,7 +46,13 @@ function Projects() {
   return (
     <>
       <Center minH="100vh" flexDirection={"column"} bg="#00739e">
-        <Box w="30%" display="flex" justifyContent={"start"} mb="0.5rem">
+        <Box
+          w="30%"
+          display="flex"
+          justifyContent={"start"}
+          mb="0.5rem"
+          mt={{ base: "2rem", sm: "2rem", md: "2rem", lg: "0", xl: "0" }}
+        >
           <Box w="60%" bgColor="black" h="0.2rem" borderRadius={"30%"}></Box>
         </Box>
         <Heading
@@ -69,13 +75,25 @@ function Projects() {
         >
           <Box w="60%" bgColor="black" h="0.2rem" borderRadius={"30%"}></Box>
         </Box>
-        <Wrap justifyContent={"center"} alignItems="center">
+        <Wrap justify={"center"} alignItems="center" display={"flex"} mb="1rem">
           {projects.map((e) => (
             <WrapItem>
               <Box>
                 <Box
-                  h="300px"
-                  w="400px"
+                  h={{
+                    base: "250px",
+                    sm: "250px",
+                    md: "250px",
+                    lg: "300px",
+                    xl: "300px",
+                  }}
+                  w={{
+                    base: "350px",
+                    sm: "350px",
+                    md: "350px",
+                    lg: "400px",
+                    xl: "400px",
+                  }}
                   m={0}
                   backgroundPosition="center"
                   bgSize={"cover"}

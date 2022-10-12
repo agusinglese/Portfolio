@@ -32,7 +32,13 @@ function About() {
         flexDirection={"column"}
         bgColor="whitesmoke"
       >
-        <Box w="30%" display="flex" justifyContent={"start"} mb="0.5rem">
+        <Box
+          w="30%"
+          display="flex"
+          justifyContent={"start"}
+          mb="0.5rem"
+          mt={{ base: "2rem", sm: "2rem", md: "2rem", lg: "0", xl: "0" }}
+        >
           <Box w="60%" bgColor="black" h="0.2rem" borderRadius={"30%"}></Box>
         </Box>
 
@@ -61,6 +67,7 @@ function About() {
           }}
           w="100%"
           justifyContent={"center"}
+          mb={{ base: "1rem", sm: "1rem" }}
         >
           <Box display="flex" flexDirection="column" alignItems="center">
             <Image src={profileImg} h="15rem" mt="3rem" />
@@ -87,13 +94,39 @@ function About() {
             alignItems={"start"}
             pt={"3rem"}
           >
-            <Center w="100%" m="1rem">
+            <Center w="90%" m="1rem" border="1px solid red">
               <Text textAlign={"center"} color="blue.900" fontSize={"xl"}>
                 Technologies and tools with which I have worked:
               </Text>
             </Center>
-            <Box w="50vw" m="0.5rem" display={"flex"} flexDirection="row">
-              <Center w="30%" bgColor="pink.300">
+            <Box
+              w={{
+                base: "95vw",
+                sm: "95vw",
+                md: "95vw",
+                lg: "50vw",
+                xl: "50vw",
+              }}
+              m="0.5rem"
+              display={"flex"}
+              flexDirection={{
+                base: "column",
+                sm: "column",
+                md: "column",
+                lg: "row",
+                xl: "row",
+              }}
+            >
+              <Center
+                w={{
+                  base: "100%",
+                  sm: "100%",
+                  md: "100%",
+                  lg: "30%",
+                  xl: "30%",
+                }}
+                bgColor="pink.300"
+              >
                 <Text textAlign={"center"} fontWeight={"semibold"}>
                   CODE
                 </Text>
@@ -120,8 +153,34 @@ function About() {
                 </Box>
               </Box>
             </Box>
-            <Box w="50vw" m="0.5rem" display={"flex"} flexDirection="row">
-              <Center w="30%" bgColor="pink.300">
+            <Box
+              w={{
+                base: "95vw",
+                sm: "95vw",
+                md: "95vw",
+                lg: "50vw",
+                xl: "50vw",
+              }}
+              m="0.5rem"
+              display={"flex"}
+              flexDirection={{
+                base: "column",
+                sm: "column",
+                md: "column",
+                lg: "row",
+                xl: "row",
+              }}
+            >
+              <Center
+                w={{
+                  base: "100%",
+                  sm: "100%",
+                  md: "100%",
+                  lg: "30%",
+                  xl: "30%",
+                }}
+                bgColor="pink.300"
+              >
                 <Text fontWeight={"semibold"}>FRONT END</Text>
               </Center>
               <Box
@@ -130,6 +189,7 @@ function About() {
                 flexDirection="row"
                 w="100%"
                 justifyContent={"space-around"}
+                alignItems="center"
               >
                 <Box display="flex" flexDirection="row">
                   <Icon as={FaReact} h={5} w={5} m={2} color="#00739e" />
@@ -149,8 +209,34 @@ function About() {
                 </Box>
               </Box>
             </Box>
-            <Box w="50vw" m="0.5rem" display={"flex"} flexDirection="row">
-              <Center w="30%" bgColor="pink.300">
+            <Box
+              w={{
+                base: "95vw",
+                sm: "95vw",
+                md: "95vw",
+                lg: "50vw",
+                xl: "50vw",
+              }}
+              m="0.5rem"
+              display={"flex"}
+              flexDirection={{
+                base: "column",
+                sm: "column",
+                md: "column",
+                lg: "row",
+                xl: "row",
+              }}
+            >
+              <Center
+                w={{
+                  base: "100%",
+                  sm: "100%",
+                  md: "100%",
+                  lg: "30%",
+                  xl: "30%",
+                }}
+                bgColor="pink.300"
+              >
                 <Text textAlign={"center"} fontWeight={"semibold"}>
                   BACK END
                 </Text>
@@ -163,11 +249,11 @@ function About() {
                 justifyContent={"space-around"}
               >
                 <Box display="flex" flexDirection="row">
-                  <Icon as={FaNodeJs} h={5} w={5} m={2} color="#00739e" />{" "}
+                  <Icon as={FaNodeJs} h={5} w={5} m={2} color="#00739e" />
                   <Text m={1}>Node.js</Text>
                 </Box>
                 <Box display="flex" flexDirection="row">
-                  <Icon as={SiExpress} h={5} w={5} m={2} color="#00739e" />{" "}
+                  <Icon as={SiExpress} h={5} w={5} m={2} color="#00739e" />
                   <Text m={1}>Express</Text>
                 </Box>
                 <Box display="flex" flexDirection="row">
@@ -176,8 +262,34 @@ function About() {
                 </Box>
               </Box>
             </Box>
-            <Box w="50vw" m="0.5rem" display={"flex"} flexDirection="row">
-              <Center w="30%" bgColor="pink.300">
+            <Box
+              w={{
+                base: "95vw",
+                sm: "95vw",
+                md: "95vw",
+                lg: "50vw",
+                xl: "50vw",
+              }}
+              m="0.5rem"
+              display={"flex"}
+              flexDirection={{
+                base: "column",
+                sm: "column",
+                md: "column",
+                lg: "row",
+                xl: "row",
+              }}
+            >
+              <Center
+                w={{
+                  base: "100%",
+                  sm: "100%",
+                  md: "100%",
+                  lg: "30%",
+                  xl: "30%",
+                }}
+                bgColor="pink.300"
+              >
                 <Text textAlign={"center"} fontWeight={"semibold"}>
                   DATA BASES
                 </Text>
@@ -199,8 +311,34 @@ function About() {
                 </Box>
               </Box>
             </Box>
-            <Box w="50vw" m="0.5rem" display={"flex"} flexDirection="row">
-              <Center w="30%" bgColor="pink.300">
+            <Box
+              w={{
+                base: "95vw",
+                sm: "95vw",
+                md: "95vw",
+                lg: "50vw",
+                xl: "50vw",
+              }}
+              m="0.5rem"
+              display={"flex"}
+              flexDirection={{
+                base: "column",
+                sm: "column",
+                md: "column",
+                lg: "row",
+                xl: "row",
+              }}
+            >
+              <Center
+                w={{
+                  base: "100%",
+                  sm: "100%",
+                  md: "100%",
+                  lg: "30%",
+                  xl: "30%",
+                }}
+                bgColor="pink.300"
+              >
                 <Text
                   textAlign={"center"}
                   bgColor="pink.300"

@@ -25,9 +25,33 @@ function Home() {
         h="100vh"
         bgImage="linear-gradient(#00739e,#00739e,#003049)"
         display="flex"
-        alignItems={"center"}
+        alignItems={{
+          base: "start",
+          sm: "start",
+          md: "start",
+          lg: "center",
+          xl: "center",
+        }}
+        flexDirection={{
+          base: "column",
+          sm: "column",
+          md: "column",
+          lg: "row",
+          xl: "row",
+        }}
       >
-        <Box w="50%" display="flex" flexDirection={"column"} alignItems="start">
+        <Box
+          w={{
+            base: "100%",
+            sm: "100%",
+            md: "100%",
+            lg: "50%",
+            xl: "50%",
+          }}
+          display="flex"
+          flexDirection={"column"}
+          alignItems="start"
+        >
           <ChakraBox
             ml="2rem"
             animate={{
@@ -51,8 +75,21 @@ function Home() {
         </Box>
         <ChakraBox
           display={"flex"}
-          justifyContent="end"
-          w="50%"
+          mt={{ base: "2rem", sm: "2rem", md: "2rem", lg: "0", xl: "0" }}
+          justifyContent={{
+            base: "center",
+            sm: "center",
+            md: "center",
+            lg: "end",
+            xl: "end",
+          }}
+          w={{
+            base: "100%",
+            sm: "100%",
+            md: "100%",
+            lg: "50%",
+            xl: "50%",
+          }}
           animate={{
             scale: [0, 1],
             rotate: [0, 360],
@@ -62,7 +99,10 @@ function Home() {
             ease: "easeInOut",
           }}
         >
-          <Image src="https://user-images.githubusercontent.com/101023416/195164218-847d5785-f523-46f8-a445-ac062f3a8d3a.png" />
+          <Image
+            zIndex={"-1"}
+            src="https://user-images.githubusercontent.com/101023416/195164218-847d5785-f523-46f8-a445-ac062f3a8d3a.png"
+          />
         </ChakraBox>
       </Center>
     </>
