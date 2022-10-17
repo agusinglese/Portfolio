@@ -94,7 +94,7 @@ function About() {
             alignItems={"start"}
             pt={"3rem"}
           >
-            <Center w="90%" m="1rem" border="1px solid red">
+            <Center w="90%" m="1rem">
               <Text textAlign={"center"} color="blue.900" fontSize={"xl"}>
                 Technologies and tools with which I have worked:
               </Text>
