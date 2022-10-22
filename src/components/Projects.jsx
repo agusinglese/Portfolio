@@ -104,8 +104,20 @@ function Projects() {
                     bgColor={"#ffffff"}
                     opacity="0"
                     _hover={{ opacity: "1" }}
-                    h="300px"
-                    w="400px"
+                    h={{
+                      base: "250px",
+                      sm: "250px",
+                      md: "250px",
+                      lg: "300px",
+                      xl: "300px",
+                    }}
+                    w={{
+                      base: "350px",
+                      sm: "350px",
+                      md: "350px",
+                      lg: "400px",
+                      xl: "400px",
+                    }}
                     transition="opacity 1s"
                     //position="absolute"
 
