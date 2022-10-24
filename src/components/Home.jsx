@@ -61,14 +61,19 @@ function Home() {
               duration: 3,
               ease: "easeInOut",
             }}
+            mt={{ base: "4rem", sm: "10rem", md: "10rem", lg: "0" }}
           >
             <Heading as="h3" fontSize="4xl" fontWeight={"medium"}>
               Hi! I'm
             </Heading>
-            <Heading as="h2" fontSize="7xl" pb={"1rem"}>
+            <Heading as="h2" fontSize={{ base: "5xl", md: "7xl" }} pb={"1rem"}>
               Agustina Inglese
             </Heading>
-            <Text fontWeight={"medium"} letterSpacing="0.1rem" fontSize={"2xl"}>
+            <Text
+              fontWeight={"medium"}
+              letterSpacing="0.1rem"
+              fontSize={{ base: "xl", md: "2xl" }}
+            >
               FullStack Web Developer | Industrial Engineer
             </Text>
           </ChakraBox>

@@ -88,7 +88,7 @@ function Projects() {
                     xl: "300px",
                   }}
                   w={{
-                    base: "350px",
+                    base: "90vw",
                     sm: "350px",
                     md: "350px",
                     lg: "400px",
@@ -114,7 +114,7 @@ function Projects() {
                       xl: "300px",
                     }}
                     w={{
-                      base: "350px",
+                      base: "90vw",
                       sm: "350px",
                       md: "350px",
                       lg: "400px",

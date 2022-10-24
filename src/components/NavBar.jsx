@@ -43,7 +43,6 @@ function NavBar() {
               colorScheme={"pink"}
               variant="ghost"
               color="pink.200"
-              border="1px solid red"
               pr={{ base: "0.5rem", lg: "1rem" }}
               pl={{ base: "0.5rem", lg: "1rem" }}
             >

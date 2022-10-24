@@ -140,6 +140,7 @@ function About() {
                 justifyContent={"space-around"}
                 fontWeight={"light"}
                 borderBottomRadius="1rem"
+                flexWrap={"wrap"}
               >
                 <Box display="flex" flexDirection="row">
                   <Icon as={SiJavascript} h={5} w={5} m={2} color="#00739e" />{" "}
@@ -194,6 +195,7 @@ function About() {
                 justifyContent={"space-around"}
                 alignItems="center"
                 borderBottomRadius="1rem"
+                flexWrap={"wrap"}
               >
                 <Box display="flex" flexDirection="row">
                   <Icon as={FaReact} h={5} w={5} m={2} color="#00739e" />
@@ -247,6 +249,7 @@ function About() {
                 </Text>
               </Center>
               <Box
+                flexWrap={"wrap"}
                 bgColor="pink.100"
                 display="flex"
                 flexDirection="row"
@@ -302,6 +305,7 @@ function About() {
                 </Text>
               </Center>
               <Box
+                flexWrap={"wrap"}
                 bgColor="pink.100"
                 display="flex"
                 flexDirection="row"
@@ -363,6 +367,7 @@ function About() {
                 w="100%"
                 justifyContent={"space-around"}
                 borderBottomRadius="1rem"
+                flexWrap={"wrap"}
               >
                 <Box display="flex" flexDirection="row">
                   <Icon as={FaGitAlt} h={5} w={5} m={2} color="#00739e" />{" "}

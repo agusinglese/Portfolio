@@ -32,8 +32,8 @@ function Footer() {
               borderRadius="0"
               h="3rem"
               w="3rem"
-              ml="2rem"
-              mr="2rem"
+              ml={{ base: "1rem", md: "2rem" }}
+              mr={{ base: "1rem", md: "2rem" }}
               bgColor="whitesmoke"
               _hover={{
                 transform: "scale(1.5)",
@@ -49,7 +49,7 @@ function Footer() {
               borderRadius="0"
               h="3rem"
               w="3rem"
-              mr="2rem"
+              mr={{ base: "1rem", md: "2rem" }}
               bgColor="whitesmoke"
               _hover={{
                 transform: "scale(1.5)",
