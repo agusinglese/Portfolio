@@ -22,7 +22,7 @@ function Carrousel({ img }) {
             onClick={handlePrev}
             position="absolute"
             left="0"
-            bottom="45%"
+            bottom={{ base: "70%", md: "45%" }}
             bgColor="#ffffff50"
             color="black"
             fontSize={"xl"}
@@ -35,7 +35,7 @@ function Carrousel({ img }) {
             onClick={handleNext}
             position="absolute"
             right="0"
-            bottom="45%"
+            bottom={{ base: "70%", md: "45%" }}
             color="black"
             fontSize={"xl"}
             bgColor="#ffffff50"
