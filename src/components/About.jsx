@@ -70,7 +70,7 @@ function About() {
           mb={{ base: "1rem", sm: "1rem" }}
         >
           <Box display="flex" flexDirection="column" alignItems="center">
-            <Image src={profileImg} h="15rem" mt="3rem" />
+            <Image src={profileImg} h="15rem" mt="3rem" borderRadius="1rem" />
             <Container w="80%" m="1rem">
               <Text textAlign={"center"}>
                 I'm an{" "}
@@ -126,6 +126,7 @@ function About() {
                   xl: "30%",
                 }}
                 bgColor="pink.300"
+                borderTopRadius="1rem"
               >
                 <Text textAlign={"center"} fontWeight={"semibold"}>
                   CODE
@@ -138,6 +139,7 @@ function About() {
                 bgColor="pink.100"
                 justifyContent={"space-around"}
                 fontWeight={"light"}
+                borderBottomRadius="1rem"
               >
                 <Box display="flex" flexDirection="row">
                   <Icon as={SiJavascript} h={5} w={5} m={2} color="#00739e" />{" "}
@@ -180,6 +182,7 @@ function About() {
                   xl: "30%",
                 }}
                 bgColor="pink.300"
+                borderTopRadius="1rem"
               >
                 <Text fontWeight={"semibold"}>FRONT END</Text>
               </Center>
@@ -190,6 +193,7 @@ function About() {
                 w="100%"
                 justifyContent={"space-around"}
                 alignItems="center"
+                borderBottomRadius="1rem"
               >
                 <Box display="flex" flexDirection="row">
                   <Icon as={FaReact} h={5} w={5} m={2} color="#00739e" />
@@ -236,6 +240,7 @@ function About() {
                   xl: "30%",
                 }}
                 bgColor="pink.300"
+                borderTopRadius="1rem"
               >
                 <Text textAlign={"center"} fontWeight={"semibold"}>
                   BACK END
@@ -247,6 +252,7 @@ function About() {
                 flexDirection="row"
                 w="100%"
                 justifyContent={"space-around"}
+                borderBottomRadius="1rem"
               >
                 <Box display="flex" flexDirection="row">
                   <Icon as={FaNodeJs} h={5} w={5} m={2} color="#00739e" />
@@ -289,6 +295,7 @@ function About() {
                   xl: "30%",
                 }}
                 bgColor="pink.300"
+                borderTopRadius="1rem"
               >
                 <Text textAlign={"center"} fontWeight={"semibold"}>
                   DATA BASES
@@ -300,6 +307,7 @@ function About() {
                 flexDirection="row"
                 w="100%"
                 justifyContent={"space-around"}
+                borderBottomRadius="1rem"
               >
                 <Box display="flex" flexDirection="row">
                   <Icon as={SiPostgresql} h={5} w={5} m={2} color="#00739e" />{" "}
@@ -338,6 +346,7 @@ function About() {
                   xl: "30%",
                 }}
                 bgColor="pink.300"
+                borderTopRadius="1rem"
               >
                 <Text
                   textAlign={"center"}
@@ -353,6 +362,7 @@ function About() {
                 flexDirection="row"
                 w="100%"
                 justifyContent={"space-around"}
+                borderBottomRadius="1rem"
               >
                 <Box display="flex" flexDirection="row">
                   <Icon as={FaGitAlt} h={5} w={5} m={2} color="#00739e" />{" "}

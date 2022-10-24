@@ -99,11 +99,13 @@ function Projects() {
                   bgSize={"cover"}
                   backgroundRepeat="no-repeat"
                   backgroundImage={`url(${e.bgImg})`}
+                  borderRadius="1rem"
                 >
                   <Box
                     bgColor={"#ffffff"}
                     opacity="0"
                     _hover={{ opacity: "1" }}
+                    borderRadius="1rem"
                     h={{
                       base: "250px",
                       sm: "250px",

@@ -22,19 +22,31 @@ function NavBar() {
   return (
     <>
       <Box
-        h="10vh"
+        h={{ base: "13vh", lg: "10vh" }}
         w="100%"
         position={"fixed"}
         top="0"
         display={"flex"}
         flexDirection={"column"}
         justifyContent="center"
-        alignItems="end"
+        alignItems={{ base: "center", lg: "end" }}
         bgColor="#00739e"
+        zIndex={"1"}
       >
-        <ButtonGroup mr={{ base: "0", sm: "0", lg: "1rem", xl: "1rem" }}>
+        <ButtonGroup
+          mr={{ base: "0", sm: "0", lg: "1rem", xl: "1rem" }}
+          flexWrap="wrap"
+          justifyContent={{ base: "center" }}
+        >
           <Link href="#home" _hover={{ textDecoration: "none" }}>
-            <Button colorScheme={"pink"} variant="ghost" color="pink.200">
+            <Button
+              colorScheme={"pink"}
+              variant="ghost"
+              color="pink.200"
+              border="1px solid red"
+              pr={{ base: "0.5rem", lg: "1rem" }}
+              pl={{ base: "0.5rem", lg: "1rem" }}
+            >
               HOME
             </Button>
           </Link>
@@ -44,17 +56,31 @@ function NavBar() {
               colorScheme={"pink"}
               variant="ghost"
               color="pink.200"
+              pr={{ base: "0.5rem", lg: "1rem" }}
+              pl={{ base: "0.5rem", lg: "1rem" }}
             >
               ABOUT
             </Button>
           </Link>
           <Link href="#projects" _hover={{ textDecoration: "none" }}>
-            <Button colorScheme={"pink"} color="pink.200" variant="ghost">
+            <Button
+              colorScheme={"pink"}
+              color="pink.200"
+              variant="ghost"
+              pr={{ base: "0.5rem", lg: "1rem" }}
+              pl={{ base: "0.5rem", lg: "1rem" }}
+            >
               PROJECTS
             </Button>
           </Link>
           <Link href="#contact" _hover={{ textDecoration: "none" }}>
-            <Button colorScheme={"pink"} color="pink.200" variant="ghost">
+            <Button
+              colorScheme={"pink"}
+              color="pink.200"
+              variant="ghost"
+              pr={{ base: "0.5rem", lg: "1rem" }}
+              pl={{ base: "0.5rem", lg: "1rem" }}
+            >
               CONTACT
             </Button>
           </Link>
@@ -79,6 +105,7 @@ function NavBar() {
             borderRadius={"3rem"}
             p={2}
             _hover={{ transform: "scale(1.3)" }}
+            zIndex="1"
           />
         </Link>
       )}
